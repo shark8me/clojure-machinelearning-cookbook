@@ -7,5 +7,3 @@ These recipes are not tied to a single library or platform.
 
 * Creating high-dimension word vectors using Word2Vec
 
-
-
