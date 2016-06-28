@@ -10,7 +10,7 @@
                  [incanter/incanter-io "1.9.1-SNAPSHOT"]
                  [net.mikera/vectorz-clj "0.44.1"]]
  :plugins [[lein-environ "1.0.3"]
-            [lein-gorilla "0.3.6"]] 
+            [lein-gorilla "0.3.6.1"]] 
  :profiles  {:default [:dev :gorilla]
               :gorilla {:dependencies  [[incanter-gorilla "0.1.0.1"]
                                         [gg4clj "0.1.1-SNAPSHOT"]]}})
