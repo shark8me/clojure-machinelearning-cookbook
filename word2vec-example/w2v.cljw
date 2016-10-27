@@ -1,0 +1,47 @@
+;; gorilla-repl.fileformat = 1
+
+;; **
+;;; # Gorilla REPL
+;;; 
+;;; Welcome to gorilla :-)
+;;; 
+;;; Shift + enter evaluates code. Hit alt+g twice in quick succession or click the menu icon (upper-right corner) for more commands ...
+;;; 
+;;; It's a good habit to run each worksheet in its own namespace: feel free to use the declaration we've provided below if you'd like.
+;; **
+
+;; @@
+(ns divine-dusk
+  (:require [gorilla-plot.core :as plot]
+            [clojure-word2vec.core :refer :all]
+            [clojure.java.io :as io]))
+;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-nil'>nil</span>","value":"nil"}
+;; <=
+
+;; @@
+(def data
+  (create-input-format "/home/kiran/Downloads/ulysses.txt"))
+;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-var'>#&#x27;divine-dusk/data</span>","value":"#'divine-dusk/data"}
+;; <=
+
+;; @@
+(def model (word2vec data))
+;; @@
+;; =>
+;;; {"type":"html","content":"<span class='clj-var'>#&#x27;divine-dusk/model</span>","value":"#'divine-dusk/model"}
+;; <=
+
+;; @@
+(get-matches model "woman")
+;; @@
+;; =>
+;;; {"type":"list-like","open":"<span class='clj-lazy-seq'>(</span>","close":"<span class='clj-lazy-seq'>)</span>","separator":" ","items":[{"type":"html","content":"<span class='clj-string'>&quot;all&quot;</span>","value":"\"all\""},{"type":"html","content":"<span class='clj-string'>&quot;were&quot;</span>","value":"\"were\""},{"type":"html","content":"<span class='clj-string'>&quot;so&quot;</span>","value":"\"so\""},{"type":"html","content":"<span class='clj-string'>&quot;one&quot;</span>","value":"\"one\""},{"type":"html","content":"<span class='clj-string'>&quot;him&quot;</span>","value":"\"him\""},{"type":"html","content":"<span class='clj-string'>&quot;this&quot;</span>","value":"\"this\""},{"type":"html","content":"<span class='clj-string'>&quot;like&quot;</span>","value":"\"like\""},{"type":"html","content":"<span class='clj-string'>&quot;I&quot;</span>","value":"\"I\""},{"type":"html","content":"<span class='clj-string'>&quot;And&quot;</span>","value":"\"And\""},{"type":"html","content":"<span class='clj-string'>&quot;she&quot;</span>","value":"\"she\""}],"value":"(\"all\" \"were\" \"so\" \"one\" \"him\" \"this\" \"like\" \"I\" \"And\" \"she\")"}
+;; <=
+
+;; @@
+
+;; @@
