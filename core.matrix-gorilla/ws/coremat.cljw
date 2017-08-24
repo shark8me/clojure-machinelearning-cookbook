@@ -17,6 +17,77 @@
 ;;; {"type":"html","content":"<span class='clj-nil'>nil</span>","value":"nil"}
 ;; <=
 
+;; @@
+(cm/set-current-implementation :vectorz)
+;; @@
+;; ->
+;;; Error loading core.matrix implementation:  mikera.vectorz.matrix-api
+;;; #error {
+;;;  :cause Could not locate mikera/vectorz/matrix_api__init.class or mikera/vectorz/matrix_api.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+;;;  :via
+;;;  [{:type java.io.FileNotFoundException
+;;;    :message Could not locate mikera/vectorz/matrix_api__init.class or mikera/vectorz/matrix_api.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+;;;    :at [clojure.lang.RT load RT.java 456]}]
+;;;  :trace
+;;;  [[clojure.lang.RT load RT.java 456]
+;;;   [clojure.lang.RT load RT.java 419]
+;;;   [clojure.core$load$fn__5677 invoke core.clj 5893]
+;;;   [clojure.core$load invokeStatic core.clj 5892]
+;;;   [clojure.core$load doInvoke core.clj 5876]
+;;;   [clojure.lang.RestFn invoke RestFn.java 408]
+;;;   [clojure.core$load_one invokeStatic core.clj 5697]
+;;;   [clojure.core$load_one invoke core.clj 5692]
+;;;   [clojure.core$load_lib$fn__5626 invoke core.clj 5737]
+;;;   [clojure.core$load_lib invokeStatic core.clj 5736]
+;;;   [clojure.core$load_lib doInvoke core.clj 5717]
+;;;   [clojure.lang.RestFn applyTo RestFn.java 142]
+;;;   [clojure.core$apply invokeStatic core.clj 648]
+;;;   [clojure.core$load_libs invokeStatic core.clj 5774]
+;;;   [clojure.core$load_libs doInvoke core.clj 5758]
+;;;   [clojure.lang.RestFn applyTo RestFn.java 137]
+;;;   [clojure.core$apply invokeStatic core.clj 648]
+;;;   [clojure.core$require invokeStatic core.clj 5796]
+;;;   [clojure.core$require doInvoke core.clj 5796]
+;;;   [clojure.lang.RestFn invoke RestFn.java 408]
+;;;   [clojure.core.matrix.implementations$try_load_implementation invokeStatic implementations.cljc 115]
+;;;   [clojure.core.matrix.implementations$try_load_implementation invoke implementations.cljc 102]
+;;;   [clojure.core.matrix.implementations$set_current_implementation invokeStatic implementations.cljc 174]
+;;;   [clojure.core.matrix.implementations$set_current_implementation invoke implementations.cljc 164]
+;;;   [clojure.core.matrix$set_current_implementation invokeStatic matrix.cljc 2252]
+;;;   [clojure.core.matrix$set_current_implementation invoke matrix.cljc 2242]
+;;;   [condemned_mat$eval21220 invokeStatic form-init4907484770219282927.clj 1]
+;;;   [condemned_mat$eval21220 invoke form-init4907484770219282927.clj 1]
+;;;   [clojure.lang.Compiler eval Compiler.java 6927]
+;;;   [clojure.lang.Compiler eval Compiler.java 6890]
+;;;   [clojure.core$eval invokeStatic core.clj 3105]
+;;;   [clojure.core$eval invoke core.clj 3101]
+;;;   [clojure.main$repl$read_eval_print__7408$fn__7411 invoke main.clj 240]
+;;;   [clojure.main$repl$read_eval_print__7408 invoke main.clj 240]
+;;;   [clojure.main$repl$fn__7417 invoke main.clj 258]
+;;;   [clojure.main$repl invokeStatic main.clj 258]
+;;;   [clojure.main$repl doInvoke main.clj 174]
+;;;   [clojure.lang.RestFn invoke RestFn.java 1523]
+;;;   [clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__2078 invoke interruptible_eval.clj 87]
+;;;   [clojure.lang.AFn applyToHelper AFn.java 152]
+;;;   [clojure.lang.AFn applyTo AFn.java 144]
+;;;   [clojure.core$apply invokeStatic core.clj 646]
+;;;   [clojure.core$with_bindings_STAR_ invokeStatic core.clj 1881]
+;;;   [clojure.core$with_bindings_STAR_ doInvoke core.clj 1881]
+;;;   [clojure.lang.RestFn invoke RestFn.java 425]
+;;;   [clojure.tools.nrepl.middleware.interruptible_eval$evaluate invokeStatic interruptible_eval.clj 85]
+;;;   [clojure.tools.nrepl.middleware.interruptible_eval$evaluate invoke interruptible_eval.clj 55]
+;;;   [clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__2123$fn__2126 invoke interruptible_eval.clj 222]
+;;;   [clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__2118 invoke interruptible_eval.clj 190]
+;;;   [clojure.lang.AFn run AFn.java 22]
+;;;   [java.util.concurrent.ThreadPoolExecutor runWorker ThreadPoolExecutor.java 1142]
+;;;   [java.util.concurrent.ThreadPoolExecutor$Worker run ThreadPoolExecutor.java 617]
+;;;   [java.lang.Thread run Thread.java 745]]}
+;;; 
+;; <-
+;; =>
+;;; {"type":"html","content":"<span class='clj-keyword'>:vectorz</span>","value":":vectorz"}
+;; <=
+
 ;; **
 ;;; ## Dataset as a table
 ;;; 
